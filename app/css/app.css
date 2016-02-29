@@ -2,3 +2,21 @@
 body {
 	padding-top: 20px;
 }
+
+.phones {
+	list-style: none
+}
+
+.thumb {
+	float: left;
+	margin: -0.5em 1em 1.5em 0;
+	padding-bottom: 1em;
+	heigth: 100px;
+	width: 100px;
+}
+
+.phones li {
+	clear:both;
+	heigth: 115;
+	padding-top: 15px;
+}

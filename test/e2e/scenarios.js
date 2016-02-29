@@ -57,5 +57,14 @@ describe('PhoneCatApp', function() {
            "Motorola XOOM\u2122 with Wi-Fi"
            ]);
         });
+    
+    it('should render phone specific links', function(){
+      var query = element(by.model('query'));
+      query.sendKeys('nexus');
+      element(by.css('.phones li a')).click();
+      browser.getLocationAbsUrl().then(function(url){
+        expect(url).toEqual('/phones/nexus-s');
+      });
+    });
   });
 });
