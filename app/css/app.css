@@ -43,7 +43,7 @@ img.phone {
   display:none;
 }
 
-imt.phone:first-child {
+img.phone:first-child {
 	display:block;
 }
 
