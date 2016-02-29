@@ -60,7 +60,7 @@ describe('PhoneCatApp', function() {
     it('should render phone specific links', function(){
       var query = element(by.model('query'));
       query.sendKeys('nexus');
-      element(by.css('.phones li a')).click();
+      element.all(by.css('.phones li a')).first().click();
       browser.getLocationAbsUrl().then(function(url){
         expect(url).toEqual('/phones/nexus-s');
       });
@@ -72,8 +72,8 @@ describe('PhoneCatApp', function() {
        browser.get('app/index.html#/phones/nexus-s')
      });
      
-     it('Should display placeholder page with phoneId', function(){
-       expect(element(by.binding('phoneId')).getText()).toBe('nexus-s');
+     it('Should display nexus-s page', function(){
+       expect(element(by.binding('phone.name')).getText()).toBe('Nexus S');
      });
   });
   
