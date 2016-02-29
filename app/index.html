@@ -34,5 +34,6 @@
 	  </div>
   </div>
 	<p>Total number of phones: {{(phones | filter:query).length}}</p>
+	<pre>{{phones | filter:query | orderBy:orderProp | json}}</pre>
 </body>
 </html>
